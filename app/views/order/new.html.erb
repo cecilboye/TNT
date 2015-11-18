@@ -1,0 +1,16 @@
+<%= form_for @order do |f| %>
+  <table summary="subject form fields">
+    <tr>
+      <th>Package</th>
+      <td><%= f.text_field(:pakket) %></td>
+    </tr>
+    <tr>
+    <th>Sent</th>
+      <td><%= f.text_field(:verstuurt) %></td>
+    </tr>
+  </table>
+
+  <div class="form-buttons">
+    <%= f.submit %>
+  </div>
+<% end %>

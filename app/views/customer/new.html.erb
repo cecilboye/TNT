@@ -1,0 +1,26 @@
+<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
+
+<div class="subject new">
+	<h2>Create Subject</h2>
+
+	<%= form_for(:customer, :url=> {:action => 'create'}) do |f| %>
+
+	<table summary="subject form fields">
+		<tr>
+			<th>Voornaam</th>
+			<td><%= f.text_field(:first_name) %></td>
+		</tr>
+		<tr>
+			<th>Achternaam</th>
+			<td><%= f.text_field(:last_name) %></td>
+		</tr>
+
+	</table>
+
+	<div class="form-buttons">
+		<%= submit_tag("Create Subject") %>
+	</div>
+
+	<% end %>
+</div>
+

@@ -1,0 +1,16 @@
+<% if !flash[:notice].blank? %> 
+	<div class="notice">
+		<%= flash[:notice] %>
+<% end %>
+
+<%= link_to("<< Back to List", {:action => 'index'}, :class => 'back-link') %>
+
+<div class="subjects show">
+	<h2><%=@customers.first_name %></h2>
+
+
+	<%= link_to("View Pages", {:controller => 'order', :customer_id => @customers.id}, :class => 'action show') %>
+	<%= link_to("Edit", {:action => 'edit', :id => @customers.id}, :class => 'action edit') %>
+	<%= link_to("Delete",{:action => 'delete', :id => @customers.id}, :class => 'action delete') %>
+	<%= link_to("Create",{:controller => 'order/create', :customer_id => @customers.id}, :class => 'action create') %>
+</div>
